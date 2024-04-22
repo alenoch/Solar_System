@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #2b2b2b;
+            }
+
+            .sistema-solare {
+            height: 30em;
+            width: 30em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            }
+
+            .sole {
+                height: 6em;
+                width: 6em;
+                border-radius: 50%;
+                background: yellow;
+            }
+
+            @keyframes orbit-mercurio {
+                from {
+                transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }   
+
+            @keyframes orbit-venere {
+                from {
+                transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes orbit-terra {
+                from {
+                    transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes orbit-marte {
+                from {
+                    transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .mercurio-container {
+                position: absolute;
+                height: 10em;
+                width: 10em;
+                animation: orbit-mercurio 8.8s linear infinite;
+                border-radius: 50%;
+                border: 1px solid white;
+                display: flex;
+                justify-content: center;
+                transform-origin: center;
+            }
+
+            .mercurio {
+                height: 1.5em;
+                width: 1.5em;
+                border-radius: 50%;
+                background: grey;
+                transform: translateY(-50%);
+            }
+
+            .venere-container {
+                position: absolute;
+                height: 17em;
+                width: 17em;
+                border: 1px solid white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                animation: orbit-venere 22.5s linear infinite;
+                transform-origin: center;
+            }
+
+            .venere {
+                height: 3.5em;
+                width: 3.5em;
+                border-radius: 50%;
+                background: #d89f38;
+                transform: translateX(-50%);
+            }
+
+            .terra-container {
+                position: absolute;
+                height: 25em;
+                width: 25em;
+                border: 1px solid white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                animation: orbit-terra 36.5s linear infinite;
+                transform-origin: center;
+            }
+
+            .terra {
+                height: 3.5em;
+                width: 3.5em;
+                border-radius: 50%;
+                background: #313a86;
+                transform: translateX(50%);
+            }
+
+            .marte-container {
+                position: absolute;
+                height: 31em;
+                width: 31em;
+                border: 1px solid white;
+                border-radius: 50%;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                animation: orbit-marte 68.7s linear infinite;
+                transform-origin: center;
+            }
+
+            .marte {
+                height: 2.7em;
+                width: 2.7em;
+                border-radius: 50%;
+                background: #d86633;
+                transform: translateY(50%);
+            }
+
+            @keyframes rotation {
+                to {
+                    transform: rotate (1 turn);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="sistema-solare">
+            <div class="sole"></div>
+            <div class="mercurio-container">
+                <div class="mercurio"></div>
+            </div>
+            <div class="venere-container">
+                <div class="venere"></div>
+            </div>
+            <div class="terra-container">
+                <div class="terra"></div>
+            </div>
+            <div class="marte-container">
+                <div class="marte"></div>
+            </div>
+        </div>
+    </body>
+</html>
